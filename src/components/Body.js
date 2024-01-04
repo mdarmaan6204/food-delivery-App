@@ -47,17 +47,17 @@ const Body = () => {
     return (
       <div className="body">
         <div className="filter flex">
-          <div className="search m-4 p-4">
+          <div className="search m-4 p-4 w-1/2">
             <input
               type="text"
-              className="search-box border border-solid border-black"
+              className="search-box border border-black rounded-sm w-9/12 h-10"
               value={searchText}
               onChange={(e) => {
                 setSearchText(e.target.value);
               }}
             ></input>
             <button
-              className="search-btn px-4 py-1 bg-green-200 m-4 rounded-lg"
+              className="search-btn px-4 py-1 h-10 bg-blue-200 m-4 rounded-lg hover:bg-blue-500 shadow-xl hover:font-bold hover:text-white"
               onClick={() => {
                 // Filter the restuarant that is searched and show in UI
                 const filterResturant = listOfResturant.filter((res) =>
@@ -67,12 +67,13 @@ const Body = () => {
                 // console.log(searchText);
               }}
             >
-              Search
+              <i className="fa-solid fa-magnifying-glass"> </i>
+               Search
             </button>
           </div>
           <div className="m-4 p-4 flex items-center">
             <button
-              className="filter-btn m-4 px-4 py-2 bg-cyan-200 rounded-lg"
+              className="filter-btn m-4 px-4 py-2 h-10 bg-orange-300 rounded-lg hover:bg-orange-500 hover:font-bold  hover:text-white"
               onClick={() => {
                 const topRatedResturant = listOfResturant.filter(
                   (res) => res.info.avgRating > 4
@@ -83,8 +84,8 @@ const Body = () => {
               Top Rated Resturant
             </button>
           </div>
-          <div className="m-4 p-4 flex items-center">
-            <label>User Name </label>
+          <div className="m-4 p-4 flex items-center ">
+            <p className=" hover:bg-gray-600 rounded-sm hover:text-white hover:font-bold">User Name :</p>
             <input
               className="border border-black"
               value={loggedInUser}

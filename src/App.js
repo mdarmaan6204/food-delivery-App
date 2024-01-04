@@ -21,7 +21,7 @@ const AppLayout = () => {
 
   useEffect(() => {
     // Api call
-    setUserName("X");
+    setUserName("Armaan");
   }, []);
 
   return (

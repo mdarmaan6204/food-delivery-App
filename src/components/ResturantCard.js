@@ -12,11 +12,11 @@ const ResturantCard = (props) => {
           alt="res-logo"
           src={ CDN_URL + resData.info.cloudinaryImageId}
         />
-        <h3 className="font-bold py-4 text-lg  ">{name}</h3>
-        <h4>{cuisines.join(",")}</h4>
-        <h4>{avgRating}</h4>
-        <h4>{deliveryTime} minutes</h4>
-        <h4>{costForTwo}</h4>
+        <h3 className="font-bold py-4 text-lg ">{name}</h3>
+        <h4 className="italic">{cuisines.join(",")}</h4>
+        <h4 className="font-bold">{avgRating}⭐</h4>
+        <h4 className="font-semibold">{deliveryTime} minutes</h4>
+        <h4 className="font-bold text-lg">{costForTwo}</h4>
       </div>
     );
   };
